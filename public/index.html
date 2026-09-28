@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080e19"><meta name="description" content="Atlas — a personal universe for connected ideas. Capture thoughts, build connections, and discover new paths."><title>Atlas — A universe of your own</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23080e19'/%3E%3Cpath d='M32 7L37 27L57 32L37 37L32 57L27 37L7 32L27 27Z' fill='%23fba77d'/%3E%3C/svg%3E"><style id="atlas-styles">
+*{box-sizing:border-box} :root{color-scheme:dark;--bg:#080e19;--panel:#0e1624;--line:#ffffff13;--text:#e6ebf3;--muted:#8995a9;--peach:#fba77d;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}body{margin:0}button,input,select,textarea{font:inherit}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}button{cursor:pointer;border:1px solid #ffffff20;background:#ffffff05;color:var(--text);border-radius:9px;padding:11px 14px;font-size:13px;transition:background .15s}button:hover{background:#ffffff10}button:disabled{opacity:.45;cursor:wait}button.primary{background:var(--peach);border-color:var(--peach);color:#302017;font-weight:600}button.primary:hover{background:#ffc09d}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--peach);outline-offset:4px}[hidden]{display:none!important}input,select,textarea{width:100%;border:1px solid #ffffff22;border-radius:8px;background:#080e19;color:var(--text);padding:13px;font-size:15px;min-width:0}textarea{resize:vertical;line-height:1.6}input::placeholder,textarea::placeholder{color:#69768b}.skip{position:absolute;top:-90px;left:20px;z-index:50;background:var(--peach);color:#222;padding:15px}.skip:focus{top:10px}.topbar{height:82px;display:flex;align-items:center;gap:40px;padding:0 30px;border-bottom:1px solid var(--line);background:#0b1220}.brand{display:flex;align-items:center;gap:10px;font-size:24px;letter-spacing:5px}.brand-mark{color:var(--peach);font-size:37px;line-height:1}.brand-sub{font:9px/1.6 monospace;letter-spacing:1.6px;max-width:110px;margin-left:16px;color:var(--muted)}nav{display:flex;height:100%;gap:20px}.nav{border:0;border-radius:0;background:none;padding:0 8px;color:var(--muted);position:relative}.nav.active{color:var(--text)}.nav.active:after{content:'';height:2px;background:var(--peach);position:absolute;bottom:0;left:8px;right:8px}.top-actions{margin-left:auto;display:flex;gap:14px;align-items:center}.search-trigger{display:flex;align-items:center;gap:16px;color:var(--muted);border-color:var(--line);background:#ffffff03}.search-trigger>span{font-size:24px;line-height:15px}kbd{font:10px monospace;border:1px solid #ffffff22;border-radius:4px;padding:3px 5px;color:#778499}.app-shell{display:grid;grid-template-columns:250px minmax(0,1fr) 304px;min-height:calc(100vh - 82px)}.sidebar{padding:32px 22px 22px;border-right:1px solid var(--line);display:flex;flex-direction:column;background:linear-gradient(150deg,#101827,#090f1a)}.eyebrow{font:9px/1.5 monospace;letter-spacing:1.4px;color:#8995a9}.sidebar h1{font-size:37px;font-weight:400;letter-spacing:-1.4px;line-height:1.15;margin:18px 0 15px}em{font-family:Georgia,'Times New Roman',serif;font-weight:400;color:#edc2a6}.sidebar h1 em{color:var(--peach)}.sidebar-top>p{color:var(--muted);font-size:13px;line-height:1.8;margin-bottom:35px}.side-heading{font:9px monospace;letter-spacing:1.7px;color:#6e7b90;display:flex;align-items:center;justify-content:space-between;margin:0 0 13px}.side-heading>span{color:#c2ccdc}.kind-filters{display:grid;gap:5px;margin-bottom:32px}.kind-filters button{display:flex;gap:12px;align-items:center;text-align:left;background:none;border:0;color:#9aa6ba;padding:12px 10px}.kind-filters button span{flex:1}.kind-filters button b{font:11px monospace;font-weight:400;color:#697b91}.kind-filters button.active{background:#fba77d12;color:#fac9ae}.kind-filters button[data-kind=idea]{--kind:#fba77d}.kind-filters button[data-kind=project]{--kind:#83d8c8}.kind-filters button[data-kind=learning]{--kind:#a7a7f8}.kind-filters button[data-kind=reference]{--kind:#c2d77e}.tag-list{display:flex;gap:7px;flex-wrap:wrap}.tag-list button,.tag{font:10px monospace;color:#98a7bd;background:#111c2b;border:1px solid #ffffff0c;border-radius:5px;padding:7px 9px}.tag-list button.active{border-color:var(--peach);color:var(--peach)}.text-button{border:0;padding:0;background:none;color:var(--peach);font-size:10px}.sidebar-bottom{margin-top:auto;padding-top:30px}.quote-mark{color:var(--peach);font:38px Georgia;height:25px}.sidebar-bottom>p{font:italic 17px/1.55 Georgia;color:#a9b3c5}.data-actions{display:flex;gap:10px;border-top:1px solid var(--line);padding-top:18px}.data-actions button{background:none;border:0;font-size:10px;padding:0;color:#a7b3c8}.storage-mode{display:block;font:9px/1.6 monospace;color:#70839b;margin-top:14px}main{position:relative;min-width:0;min-height:700px;display:flex;flex-direction:column;background:radial-gradient(ellipse at 50% 45%,#101d30 0,#080e19 70%)}.workspace-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:30px 28px 0;z-index:2}.workspace-top h2{font-size:28px;font-weight:400;letter-spacing:-.8px;margin:10px 0}.workspace-top h2 em{color:#b8c1d5}.icon-button{width:30px;height:30px;padding:0;border-radius:50%;color:#899ab1;background:transparent;display:inline-grid;place-items:center;font-size:16px;flex-shrink:0}.map-view{position:relative;flex:1;min-height:580px;overflow:hidden}canvas{width:100%;height:100%;position:absolute;inset:0;touch-action:none}.map-caption{position:absolute;top:8px;left:28px;display:flex;align-items:center;gap:8px;font:10px monospace;color:#8290a8;pointer-events:none}.live-dot{width:5px;height:5px;background:var(--peach);border-radius:50%;box-shadow:0 0 10px #fba77d80}.map-tools{position:absolute;bottom:42px;right:22px;display:flex;background:#101a2bdd;border:1px solid #ffffff17;border-radius:8px;overflow:hidden}.map-tools button{border:0;border-right:1px solid var(--line);background:none;border-radius:0;padding:9px 12px;font-size:17px}.map-tools button:last-child{border:0}.map-hint{position:absolute;bottom:14px;left:28px;font:8px monospace;letter-spacing:1px;color:#52627a;pointer-events:none}.map-hint span{margin:0 7px}.workspace-footer{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding:16px 28px;font:8px monospace;letter-spacing:1px;color:#718099}.inspector{background:#0c1421;border-left:1px solid var(--line);padding:28px 24px;overflow:auto;max-height:calc(100vh - 82px)}.inspector-label{display:flex;justify-content:space-between;align-items:center;font:9px monospace;letter-spacing:1.7px;color:#6e7f98;margin-bottom:24px}.inspector .planet-preview{height:140px;display:grid;place-items:center;position:relative;margin:-4px 0 20px;background:radial-gradient(ellipse,#9b704d1a,transparent 70%)}.planet-preview img{width:120px;height:120px;object-fit:contain;filter:drop-shadow(0 0 16px #fba77d12)}.kind-pill{font:9px monospace;letter-spacing:1.3px;text-transform:uppercase;color:var(--note-color);border:1px solid color-mix(in srgb,var(--note-color) 22%,transparent);background:color-mix(in srgb,var(--note-color) 7%,transparent);border-radius:4px;padding:5px 8px;display:inline-block}.inspector h2{font-size:25px;letter-spacing:-.6px;font-weight:400;line-height:1.24;margin:15px 0 8px;overflow-wrap:anywhere}.note-date{font:10px monospace;color:#667991;margin-bottom:24px}.note-body{white-space:pre-wrap;overflow-wrap:anywhere;color:#a8b5c9;font-size:13px;line-height:1.85;max-height:250px;overflow:auto}.note-tags{display:flex;gap:6px;flex-wrap:wrap;margin:20px 0}.inspector-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:26px}.inspector-actions button{font-size:11px;padding:10px}.inspector-actions .edit{grid-column:1/-1;background:#fba77d0b;border-color:#fba77d35;color:#f8c5a9}.connections-title{font:9px monospace;letter-spacing:1.2px;color:#7487a1;border-top:1px solid var(--line);padding-top:22px;margin-bottom:14px}.connection-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}.connection-row>button:first-child{text-align:left;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:none;border:0;padding:9px 0;font-size:11px;color:#b5c1d4}.connection-dot{color:var(--peach);margin-right:7px}.remove-link{padding:0;width:22px;height:22px;border:0;color:#586b87;background:none}.delete-note{border:0;background:none;color:#b48282;font-size:10px;padding:12px 0;margin-top:15px}.inspector-empty{padding:50px 0;color:var(--muted);font-size:14px;line-height:1.8}.library{padding:25px;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;align-content:start;flex:1}.thought-card{text-align:left;border:1px solid #ffffff13;background:linear-gradient(145deg,#142033,#0c1422);padding:22px;min-height:210px}.thought-card h3{font-size:18px;font-weight:400;line-height:1.4;overflow-wrap:anywhere}.thought-card p{font-size:12px;line-height:1.7;color:#8b9cb6}.thought-card .card-tags{font:10px monospace;color:#69819f}.map-empty{position:absolute;top:30%;left:10%;right:10%;text-align:center;color:var(--muted)}.map-empty>span{font-size:60px;color:var(--peach)}.map-empty h3{color:#d7dfeb;font-size:23px;font-weight:400}.map-empty p{font-size:14px;line-height:1.7}.mode-banner{position:absolute;bottom:58px;left:20px;right:20px;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#263144ed;border:1px solid #fba77d50;padding:12px 15px;z-index:5;font-size:12px}.mode-banner button{padding:7px 10px;font-size:11px}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);max-width:min(90vw,600px);padding:14px 22px;background:#e8c2a6;color:#261e19;border-radius:10px;box-shadow:0 10px 40px #0006;font-size:13px;line-height:1.6;z-index:30;opacity:0;pointer-events:none;transition:opacity .2s}.toast.visible{opacity:1}dialog{width:min(580px,calc(100vw - 32px));max-height:90vh;overflow:auto;border:1px solid #ffffff22;background:#101a2a;color:var(--text);border-radius:18px;padding:28px;box-shadow:0 35px 150px #000b}dialog::backdrop{background:#02050cb0;backdrop-filter:blur(8px)}.dialog-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}dialog h2{font:400 29px/1.2 Georgia;margin:0 0 24px;color:#f1d3be}dialog label{display:grid;gap:9px;font-size:12px;color:#aab8ce;margin-bottom:18px}.form-pair{display:grid;grid-template-columns:140px 1fr;gap:14px}.optional{color:#667e9c;font-size:10px}.dialog-footer{display:flex;justify-content:space-between;align-items:center;gap:15px;padding-top:10px}.dialog-footer>span{font-size:11px;color:#7086a5}#form-error{color:#f4aaab;font-size:13px;line-height:1.5}.search-result{display:block;width:100%;text-align:left;margin-top:8px;padding:15px;background:#172339;border:0}.search-result span{display:block;font-size:11px;color:#8fa0b9;margin-top:6px}.search-help{font-size:11px;color:#7e92af}.search-result strong{font-weight:400}dialog p,dialog dd{font-size:14px;color:#9eadc4;line-height:1.75}dialog dt{color:var(--peach);font-size:13px;margin-top:18px}dialog dd{margin:5px 0 0}.mobile-filter{display:none}#close-inspector{display:none}.app-shell.no-inspector{grid-template-columns:250px minmax(0,1fr)}.app-shell.no-inspector .inspector{display:none}@media(min-width:1600px){.app-shell{grid-template-columns:280px minmax(0,1fr) 340px}.sidebar{padding:40px 30px}.inspector{padding:32px}.workspace-top{padding-top:40px}main{min-height:800px}}@media(max-width:1200px){.brand-sub{display:none}.app-shell{grid-template-columns:215px minmax(0,1fr) 275px}.sidebar{padding:27px 17px}.sidebar h1{font-size:32px}.inspector{padding:24px 18px}.topbar{gap:25px;padding:0 22px}.search-trigger kbd{display:none}.workspace-top{padding:25px 20px 0}.workspace-top h2{font-size:24px}.map-view{min-height:550px}.app-shell.no-inspector{grid-template-columns:215px minmax(0,1fr)}}@media(max-width:1000px){.app-shell,.app-shell.no-inspector{grid-template-columns:200px minmax(0,1fr)}.inspector{position:fixed;right:0;top:82px;bottom:0;width:310px;z-index:10;box-shadow:-25px 0 70px #0006;border-left:1px solid #ffffff25}.inspector:not(.open){display:none}#close-inspector{display:inline-grid}.search-trigger{font-size:0;padding:11px}.search-trigger>span{font-size:22px}.search-trigger kbd{display:none}.workspace-top h2{font-size:28px}}@media(max-width:680px){.topbar{height:68px;padding:0 16px;gap:14px}.brand{font-size:19px;letter-spacing:3px;gap:6px}.brand-mark{font-size:29px}.top-actions{gap:8px}.top-actions .primary{font-size:11px;padding:10px}nav{position:fixed;bottom:0;left:0;right:0;height:55px;z-index:15;background:#101a2a;justify-content:center;border-top:1px solid var(--line)}.nav{width:40%}.nav.active:after{top:0;bottom:auto}.app-shell,.app-shell.no-inspector{display:block;min-height:calc(100vh - 68px)}.sidebar{display:none}main{min-height:calc(100vh - 123px);padding-bottom:55px}.workspace-top{padding:26px 20px 0}.workspace-top h2{font-size:28px}.eyebrow{font-size:9px}.mobile-filter{display:block;padding:10px 20px 0}.mobile-filter label{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted)}.mobile-filter select{width:145px;padding:7px;font-size:12px}.map-view{min-height:470px}.map-caption{top:16px;left:20px;font-size:9px}.map-hint{font-size:7px;left:20px;bottom:14px;letter-spacing:0}.map-tools{right:15px;bottom:42px}.workspace-footer{padding:16px 20px;font-size:7px}.inspector{top:68px;bottom:55px;width:min(340px,100vw);max-height:calc(100vh - 123px)}.library{padding:20px;grid-template-columns:1fr}.thought-card{min-height:170px}.dialog-footer>span{display:none}dialog{padding:22px}.form-pair{grid-template-columns:1fr}.toast{bottom:70px}.mode-banner{bottom:113px}.sidebar-bottom{display:none}}@media(prefers-reduced-motion:reduce){*{transition:none!important}} 
+
+</style></head>
+<body>
+<a class="skip" href="#workspace">Skip to workspace</a>
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">✳</span>ATLAS<span class="brand-sub">A SPACE FOR YOUR MIND</span></a><nav aria-label="Views"><button id="explore-view" class="nav active" aria-pressed="true">Explore</button><button id="library-view" class="nav" aria-pressed="false">Library</button></nav><div class="top-actions"><button id="search-open" class="search-trigger"><span>⌕</span> Find a thought <kbd>Ctrl K</kbd></button><button id="new-note" class="primary">＋ New thought</button></div></header>
+<div class="app-shell">
+<aside class="sidebar"><div class="sidebar-top"><span class="eyebrow">YOUR PERSONAL OBSERVATORY</span><h1>A universe<br>of your <em>own.</em></h1><p>A home for your ideas.<br>A place to see what connects.</p></div><div class="side-heading">YOUR UNIVERSE <span id="total-notes">0</span></div><div id="kind-filters" class="kind-filters"><button data-kind="all" class="active">◉ <span>All thoughts</span><b id="count-all">0</b></button><button data-kind="idea">✧ <span>Ideas</span><b id="count-idea">0</b></button><button data-kind="project">◇ <span>Projects</span><b id="count-project">0</b></button><button data-kind="learning">◌ <span>Learning</span><b id="count-learning">0</b></button><button data-kind="reference">▧ <span>References</span><b id="count-reference">0</b></button></div><div class="side-heading">CONSTELLATIONS <button id="clear-tag" class="text-button" hidden>Clear</button></div><div id="tag-list" class="tag-list"></div><div class="sidebar-bottom"><div class="quote-mark">“</div><p>Somewhere, something<br>incredible is waiting<br>to be connected.</p><div class="data-actions"><button id="export">Export universe ↗</button><button id="import-open">Import</button><input id="import-file" type="file" accept=".json,application/json" hidden></div><span id="storage-mode" class="storage-mode">Opening your universe…</span></div></aside>
+<main id="workspace" tabindex="-1"><div class="workspace-top"><div><span class="eyebrow">THE BIG PICTURE</span><h2>Everything is <em>connected.</em></h2></div><button id="help-open" class="icon-button" aria-label="How to use Atlas">?</button></div><div class="mobile-filter"><label>Show<select id="mobile-kind"><option value="all">All thoughts</option><option value="idea">Ideas</option><option value="project">Projects</option><option value="learning">Learning</option><option value="reference">References</option></select></label></div><div id="map-view" class="map-view"><canvas id="universe" aria-label="Interactive thought map. Use the Library view or Find a thought to access every note with a keyboard."></canvas><div class="map-caption"><span class="live-dot"></span><span id="map-count">Charting your thoughts</span></div><div class="map-tools"><button id="tidy" aria-label="Tidy map" title="Spread thoughts apart">Tidy</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="fit" aria-label="Fit all thoughts">⊙</button><button id="zoom-in" aria-label="Zoom in">＋</button></div><div id="map-empty" class="map-empty" hidden><span>✧</span><h3>Space for something new.</h3><p>No thoughts match this view. Create a thought or clear your filters.</p></div><p class="map-hint">DRAG TO EXPLORE <span>·</span> SCROLL TO ZOOM <span>·</span> SELECT A PLANET</p></div><section id="library" class="library" aria-label="Thought library" hidden></section><div id="mode-banner" class="mode-banner" hidden><span id="mode-text"></span><button id="cancel-mode">Cancel</button></div><footer class="workspace-footer"><span>✦ IDEAS ARE BETTER TOGETHER</span><span id="connection-count">0 CONNECTIONS</span></footer></main>
+<aside id="inspector" class="inspector" aria-label="Selected thought"><div class="inspector-label"><span>THOUGHT DETAILS</span><button id="close-inspector" class="icon-button" aria-label="Close thought details">×</button></div><div id="inspector-content"></div></aside>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<dialog id="note-dialog"><form id="note-form"><div class="dialog-top"><span class="eyebrow" id="editor-label">NEW THOUGHT</span><button type="button" class="icon-button" data-close="note-dialog" aria-label="Close editor">×</button></div><h2>Give your idea a world.</h2><label>Title<input name="title" required maxlength="100" placeholder="What’s on your mind?"></label><div class="form-pair"><label>Type<select name="kind"><option value="idea">Idea</option><option value="project">Project</option><option value="learning">Learning</option><option value="reference">Reference</option></select></label><label>Tags <span class="optional">comma separated</span><input name="tags" maxlength="247" placeholder="design, curiosity"></label></div><label>Your thought<textarea name="body" rows="7" maxlength="20000" placeholder="Let the thought unfold…"></textarea></label><p id="form-error" role="alert"></p><div class="dialog-footer"><span>Your next connection starts here.</span><button id="save-note" class="primary" type="submit">Save thought ↗</button></div></form></dialog>
+<dialog id="search-dialog"><div class="dialog-top"><span class="eyebrow">FIND A THOUGHT</span><button class="icon-button" data-close="search-dialog" aria-label="Close search">×</button></div><input id="search-input" aria-label="Search titles, notes, and tags" placeholder="Follow your curiosity…" type="search"><div id="search-results"></div><p class="search-help">Search titles, notes, and tags. Press Tab to explore results.</p></dialog>
+<dialog id="help-dialog"><div class="dialog-top"><span class="eyebrow">WELCOME TO ATLAS</span><button class="icon-button" data-close="help-dialog" aria-label="Close help">×</button></div><h2>Your thoughts have gravity.</h2><p>Each planet is a thought. Connections turn isolated notes into a universe you can explore.</p><dl><dt>Capture</dt><dd>Select New thought to save an idea, project, lesson, or reference.</dd><dt>Explore</dt><dd>Select a planet to read it. Drag planets to arrange them, drag empty space to pan, and use the zoom controls to get closer.</dd><dt>Connect</dt><dd>Open a thought, choose Connect, then select another planet or library card.</dd><dt>Discover</dt><dd>Choose Find a route, then a second thought. Atlas finds the shortest chain of connections between them.</dd><dt>Keep it yours</dt><dd>Export a JSON backup any time. Imports add copies to your universe without replacing existing thoughts.</dd><dt>Keyboard</dt><dd>Ctrl/Cmd K opens search. Escape closes dialogs. The Library and search results provide a keyboard-accessible alternative to the map.</dd></dl><p id="help-storage"></p></dialog>
+<dialog id="confirm-dialog"><div class="dialog-top"><span class="eyebrow">ONE LAST CHECK</span><button class="icon-button" data-close="confirm-dialog" aria-label="Cancel">×</button></div><h2 id="confirm-title"></h2><p id="confirm-body"></p><div class="dialog-footer"><button data-close="confirm-dialog">Cancel</button><button id="confirm-action" class="primary">Continue</button></div></dialog>
+<script id="atlas-app">
+(function(){
+/** Pure graph utilities shared by the app, API and tests. */
+const KINDS = ['idea', 'learning', 'project', 'reference'];
+const COLORS = {idea:'#fba77d',learning:'#a7a7f8',project:'#83d8c8',reference:'#c2d77e'};
+/** Find room for both a planet and its caption, without moving existing thoughts. */
+function findOpenPosition(notes, preferred={x:0,y:0}) {
+  const free=p=>Math.abs(p.x)<=10000&&Math.abs(p.y)<=10000&&notes.every(n=>Math.abs(n.x-p.x)>=320||Math.abs(n.y-p.y)>=200);
+  if(free(preferred))return {...preferred};
+  for(let ring=1;ring<=100;ring++){
+    const count=ring*12;
+    for(let i=0;i<count;i++){
+      const angle=i/count*Math.PI*2;
+      const p={x:preferred.x+Math.cos(angle)*ring*100,y:preferred.y+Math.sin(angle)*ring*100};
+      if(free(p))return p;
+    }
+  }
+  throw Error('No free space nearby. Tidy the map before adding another thought.');
+}
+function tidyPositions(notes) {
+  const placed=[];
+  for(const note of [...notes].sort((a,b)=>Math.hypot(a.x,a.y)-Math.hypot(b.x,b.y)||a.id.localeCompare(b.id))){
+    placed.push({id:note.id,...findOpenPosition(placed,{x:note.x,y:note.y})});
+  }
+  return placed;
+}
+function searchNotes(notes, query='', kind='all', tag='') {
+  const words=query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+  return notes.filter(note => (kind==='all'||note.kind===kind) && (!tag||note.tags.includes(tag)) && words.every(word => [note.title,note.body,...note.tags].join(' ').toLowerCase().includes(word)));
+}
+function neighbors(noteId, links) {
+  return [...new Set(links.flatMap(link=>link.from===noteId?[link.to]:link.to===noteId?[link.from]:[]))];
+}
+/** Breadth-first search finds a shortest route in an unweighted, undirected graph. */
+function shortestPath(from,to,links) {
+  if(from===to)return [from];
+  const adjacency=new Map();
+  for(const {from:a,to:b} of links){if(!adjacency.has(a))adjacency.set(a,[]);if(!adjacency.has(b))adjacency.set(b,[]);adjacency.get(a).push(b);adjacency.get(b).push(a);}
+  const queue=[from],previous=new Map([[from,null]]);
+  for(let index=0;index<queue.length;index++){
+    for(const next of adjacency.get(queue[index])||[]){
+      if(previous.has(next))continue;previous.set(next,queue[index]);
+      if(next===to){const path=[to];let cursor=to;while(previous.get(cursor)!==null){cursor=previous.get(cursor);path.push(cursor);}return path.reverse();}
+      queue.push(next);
+    }
+  }
+  return [];
+}
+function validateNote(value,{partial=false}={}) {
+  if(!value||typeof value!=='object'||Array.isArray(value))throw Error('A note must be an object.');
+  const result={};
+  if(!partial||'title' in value){if(typeof value.title!=='string'||!value.title.trim()||value.title.trim().length>100)throw Error('Give your thought a title of 1–100 characters.');result.title=value.title.trim();}
+  if(!partial||'body' in value){if(typeof value.body!=='string'||value.body.length>20000)throw Error('Notes can contain up to 20,000 characters.');result.body=value.body;}
+  if(!partial||'kind' in value){if(!KINDS.includes(value.kind))throw Error('Choose a valid thought type.');result.kind=value.kind;}
+  if(!partial||'tags' in value){if(!Array.isArray(value.tags)||value.tags.length>8||value.tags.some(t=>typeof t!=='string'||!t.trim()||t.trim().length>30))throw Error('Use up to eight tags, each 1–30 characters.');result.tags=[...new Set(value.tags.map(t=>t.trim().toLowerCase()))];}
+  for(const key of ['x','y']){if(!partial||key in value){if(typeof value[key]!=='number'||!Number.isFinite(value[key])||Math.abs(value[key])>10000)throw Error('Coordinates must be finite and within the map.');result[key]=value[key];}}
+  return result;
+}
+function validateSnapshot(value) {
+  if(!value||value.version!==1||!Array.isArray(value.notes)||!Array.isArray(value.links))throw Error('Choose an Atlas version 1 JSON export.');
+  if(value.notes.length>500||value.links.length>2000)throw Error('An import can contain up to 500 thoughts and 2,000 connections.');
+  const ids=new Set();
+  const notes=value.notes.map(note=>{if(typeof note.id!=='string'||!note.id||note.id.length>80||ids.has(note.id))throw Error('Thought IDs must be unique.');ids.add(note.id);return {id:note.id,...validateNote(note)};});
+  const pairs=new Set();
+  const links=value.links.map(link=>{if(!ids.has(link.from)||!ids.has(link.to)||link.from===link.to)throw Error('Connections must join two different imported thoughts.');const pair=[link.from,link.to].sort().join('::');if(pairs.has(pair))throw Error('Duplicate connection.');pairs.add(pair);return {from:link.from,to:link.to};});
+  return {version:1,notes,links};
+}
+function seededWorkspace() {
+  const definitions=[
+    ['creative-engine','The creative engine','idea',0,0,['creativity','systems'],'Good ideas rarely arrive alone. They grow at the intersection of things we already know.\n\nThis universe is a place to capture those fragments, connect them, and discover what becomes possible.\n\nTry dragging a planet, editing a thought, or connecting two ideas. These sample thoughts are yours to change.'],
+    ['generative-art','Art that writes itself','project',-240,-160,['creativity','code'],'Build a generative art studio where a simple set of rules produces something unexpected.\n\nExplore particle systems, color fields, and noise. Give people a seed they can share to recreate an artwork.'],
+    ['graph-theory','The shape of a connection','learning',250,-135,['systems','code'],'A graph is a collection of nodes and edges. In Atlas, thoughts are nodes and connections are edges.\n\nBreadth-first search finds the shortest path between two thoughts. Try “Find a route” to see it in action.'],
+    ['quiet-design','Design for a quieter mind','reference',-280,80,['design','focus'],'The best interface does not ask for all your attention. It creates room for your intention.\n\nStudy negative space, contrast, and progressive disclosure. What can stay hidden until it is needed?'],
+    ['tiny-habits','Small actions, compounding','idea',225,150,['focus','systems'],'A tiny action repeated consistently can change the shape of a year.\n\nWhat would happen if we made learning feel like tending a garden, instead of climbing a leaderboard?'],
+    ['sound-garden','A garden made of sound','project',-60,260,['creativity','design'],'An ambient music instrument where each plant grows a different sound. The composition evolves with the garden.\n\nAn experiment in interfaces that invite play instead of demanding productivity.'],
+    ['data-stories','Give data a human voice','learning',420,35,['design','code'],'A visualization is an argument about what matters.\n\nBefore drawing a chart, write the question it should help someone answer. Then choose the simplest honest representation.'],
+    ['curiosity','Collect better questions','idea',-420,-35,['creativity','focus'],'What surprised you today?\nWhat did you assume that might not be true?\nWhat would this look like if it were easy?\n\nA useful question can outlive its first answer.'],
+    ['local-first','Own your digital space','reference',55,-290,['systems','code'],'Software can be useful without requiring an account or sending your thoughts to someone else’s server.\n\nAtlas stores its full workspace in a local SQLite database when you run its server. The standalone preview uses this browser’s storage.']
+  ];
+  const now=new Date().toISOString();
+  const notes=definitions.map(([id,title,kind,x,y,tags,body])=>({id,title,kind,x,y,tags,body,revision:1,createdAt:now,updatedAt:now}));
+  const pairs=[['creative-engine','generative-art'],['creative-engine','graph-theory'],['creative-engine','quiet-design'],['creative-engine','tiny-habits'],['creative-engine','sound-garden'],['graph-theory','data-stories'],['generative-art','curiosity'],['curiosity','quiet-design'],['quiet-design','sound-garden'],['local-first','graph-theory'],['tiny-habits','sound-garden'],['local-first','creative-engine']];
+  return {version:1,notes,links:pairs.map(([from,to],i)=>({id:'seed-link-'+i,from,to,createdAt:now}))};
+}
+
+
+/** Canvas renderer. The graph stays in world coordinates; camera transforms are separate. */
+class Universe {
+  constructor(canvas,{select,move}) {
+    this.canvas=canvas;this.ctx=canvas.getContext('2d');this.select=select;this.move=move;
+    this.notes=[];this.links=[];this.selected=null;this.path=[];this.zoom=1;this.pan={x:0,y:0};this.textures=new Map();
+    this.stars=Array.from({length:260},(_,i)=>({x:this.random(i+1),y:this.random(i+400),r:this.random(i+800)*1.3+.2}));
+    this.resizeObserver=new ResizeObserver(()=>this.resize());this.resizeObserver.observe(canvas);
+    canvas.addEventListener('pointerdown',e=>this.down(e));
+    canvas.addEventListener('pointermove',e=>this.pointer(e));
+    canvas.addEventListener('pointerup',e=>this.up(e));
+    canvas.addEventListener('pointercancel',()=>{this.drag=null;this.draw();});
+    canvas.addEventListener('wheel',e=>{e.preventDefault();this.scale(e.deltaY>0?.9:1.1);},{passive:false});
+  }
+  random(seed){const value=Math.sin(seed*127.1)*43758.5453;return value-Math.floor(value);}
+  resize(){const box=this.canvas.getBoundingClientRect();this.w=box.width;this.h=box.height;const dpr=Math.min(devicePixelRatio||1,2);this.canvas.width=this.w*dpr;this.canvas.height=this.h*dpr;this.ctx.setTransform(dpr,0,0,dpr,0,0);this.draw();}
+  set(data,selected,path=[]){this.notes=data.notes;this.links=data.links;this.selected=selected;this.path=path;this.draw();}
+  fit(){if(!this.notes.length){this.zoom=1;this.pan={x:0,y:0};return this.draw();}const xs=this.notes.map(n=>n.x),ys=this.notes.map(n=>n.y);const minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys);this.zoom=Math.max(.35,Math.min(1.1,Math.max(80,this.w-240)/Math.max(1,maxX-minX),Math.max(100,this.h-230)/Math.max(1,maxY-minY)));this.pan={x:-(minX+maxX)/2*this.zoom,y:-(minY+maxY)/2*this.zoom-20};this.draw();}
+  scale(factor){const next=Math.max(.12,Math.min(2.8,this.zoom*factor));this.pan.x*=next/this.zoom;this.pan.y*=next/this.zoom;this.zoom=next;this.draw();}
+  point(event){const r=this.canvas.getBoundingClientRect();return {x:event.clientX-r.left,y:event.clientY-r.top};}
+  world(point){return {x:(point.x-this.w/2-this.pan.x)/this.zoom,y:(point.y-this.h/2-this.pan.y)/this.zoom};}
+  radius(note){return note.id===this.selected?64:28+Math.min(18,this.links.filter(l=>l.from===note.id||l.to===note.id).length*4);}
+  hit(point){const world=this.world(point);return [...this.notes].sort((a,b)=>(a.id===this.selected?-1:0)-(b.id===this.selected?-1:0)).find(n=>Math.hypot(n.x-world.x,n.y-world.y)<this.radius(n)+12);}
+  down(event){if(event.button!==0)return;const p=this.point(event),note=this.hit(p);this.drag={start:p,pan:{...this.pan},note:note?{...note}:null,moved:false};this.canvas.setPointerCapture(event.pointerId);}
+  pointer(event){const p=this.point(event);if(!this.drag){this.canvas.style.cursor=this.hit(p)?'pointer':'grab';return;}const dx=p.x-this.drag.start.x,dy=p.y-this.drag.start.y;if(Math.hypot(dx,dy)>5)this.drag.moved=true;if(!this.drag.moved)return;this.canvas.style.cursor='grabbing';if(this.drag.note){this.preview={id:this.drag.note.id,x:Math.max(-10000,Math.min(10000,this.drag.note.x+dx/this.zoom)),y:Math.max(-10000,Math.min(10000,this.drag.note.y+dy/this.zoom))};}else this.pan={x:this.drag.pan.x+dx,y:this.drag.pan.y+dy};this.draw();}
+  up(){if(!this.drag)return;const drag=this.drag;this.drag=null;if(drag.note){if(drag.moved&&this.preview)this.move(drag.note.id,this.preview.x,this.preview.y);else this.select(drag.note.id);}this.preview=null;this.canvas.style.cursor='grab';this.draw();}
+  texture(kind){
+    if(this.textures.has(kind))return this.textures.get(kind);
+    const image=document.createElement('canvas');image.width=image.height=256;const c=image.getContext('2d'),pixels=c.createImageData(256,256);
+    const rgb=COLORS[kind].slice(1).match(/../g).map(x=>parseInt(x,16));
+    for(let y=0;y<256;y++)for(let x=0;x<256;x++){
+      const nx=(x-128)/125,ny=(y-128)/125,rr=nx*nx+ny*ny;if(rr>1)continue;
+      const z=Math.sqrt(1-rr),light=Math.max(.06,nx*-.42+ny*-.4+z*.8),warp=Math.sin(nx*7+ny*4)*.13;
+      const bands=.64+.18*Math.sin((ny+warp)*39)+.1*Math.sin((ny+warp)*110+nx*9)+.08*this.random(x+y*256);
+      const shade=bands*light;const i=(y*256+x)*4;for(let k=0;k<3;k++)pixels.data[i+k]=Math.min(255,rgb[k]*shade+15*light);pixels.data[i+3]=Math.min(255,(1-rr)*9000);
+    }
+    c.putImageData(pixels,0,0);this.textures.set(kind,image);return image;
+  }
+  draw(){
+    const c=this.ctx;if(!this.w||!this.h)return;c.clearRect(0,0,this.w,this.h);
+    const glow=c.createRadialGradient(this.w*.55,this.h*.52,10,this.w*.55,this.h*.52,this.w*.58);glow.addColorStop(0,'#26324840');glow.addColorStop(.45,'#141b3230');glow.addColorStop(1,'#060b1400');c.fillStyle=glow;c.fillRect(0,0,this.w,this.h);
+    for(const star of this.stars){c.fillStyle=star.r>1.2?'#8babc3':'#52657c';c.globalAlpha=.25+star.r*.28;c.beginPath();c.arc(star.x*this.w,star.y*this.h,star.r,0,Math.PI*2);c.fill();}c.globalAlpha=1;
+    c.save();c.translate(this.w/2+this.pan.x,this.h/2+this.pan.y);c.scale(this.zoom,this.zoom);
+    c.strokeStyle='#617a9622';c.lineWidth=1/this.zoom;c.setLineDash([2,8]);for(const r of [150,300,460]){c.beginPath();c.ellipse(0,0,r,r*.7,-.28,0,Math.PI*2);c.stroke();}c.setLineDash([]);
+    const map=new Map(this.notes.map(n=>[n.id,this.preview?.id===n.id?{...n,...this.preview}:n]));
+    for(const link of this.links){const a=map.get(link.from),b=map.get(link.to);if(!a||!b)continue;const highlighted=this.path.some((id,i)=>i>0&&((id===a.id&&this.path[i-1]===b.id)||(id===b.id&&this.path[i-1]===a.id)));c.strokeStyle=highlighted?'#ffb68a':(a.id===this.selected||b.id===this.selected?'#a6aebc66':'#7089a331');c.lineWidth=(highlighted?2:1)/this.zoom;c.beginPath();c.moveTo(a.x,a.y);c.lineTo(b.x,b.y);c.stroke();const mx=(a.x+b.x)/2,my=(a.y+b.y)/2;c.fillStyle=highlighted?'#ffc8a1':'#6c7e98';c.beginPath();c.arc(mx,my,2/this.zoom,0,Math.PI*2);c.fill();}
+    for(const original of [...this.notes].sort((a,b)=>Number(a.id===this.selected)-Number(b.id===this.selected))){const note=map.get(original.id),r=this.radius(note),selected=note.id===this.selected;
+      if(selected){const halo=c.createRadialGradient(note.x,note.y,r*.8,note.x,note.y,r*1.9);halo.addColorStop(0,COLORS[note.kind]+'35');halo.addColorStop(1,COLORS[note.kind]+'00');c.fillStyle=halo;c.fillRect(note.x-r*2,note.y-r*2,r*4,r*4);c.strokeStyle=COLORS[note.kind]+'65';c.lineWidth=1/this.zoom;c.beginPath();c.ellipse(note.x,note.y,r*1.35,r*.36,-.42,0,Math.PI*2);c.stroke();}
+      c.drawImage(this.texture(note.kind),note.x-r,note.y-r,r*2,r*2);
+      if(selected){c.strokeStyle=COLORS[note.kind]+'66';c.lineWidth=1/this.zoom;c.setLineDash([3,6]);c.beginPath();c.arc(note.x,note.y,r+10,0,Math.PI*2);c.stroke();c.setLineDash([]);}
+    }
+    // Captions are laid out in screen space so zooming cannot make text collide.
+    c.restore();
+    const occupied=[];
+    const planets=[...map.values()].map(n=>({id:n.id,x:this.w/2+this.pan.x+n.x*this.zoom,y:this.h/2+this.pan.y+n.y*this.zoom,r:this.radius(n)*this.zoom}));
+    const overlaps=(a,b)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;
+    for(const note of [...map.values()].sort((a,b)=>Number(b.id===this.selected)-Number(a.id===this.selected))){
+      const p=planets.find(p=>p.id===note.id),selected=note.id===this.selected;
+      c.font=(selected?'500 ':'400 ')+'12px Arial';
+      const title=note.title.length>28?note.title.slice(0,26)+'…':note.title;
+      const width=c.measureText(title).width+12;
+      const candidates=[{x:p.x-width/2,y:p.y+p.r+12,w:width,h:34},{x:p.x-width/2,y:p.y-p.r-48,w:width,h:34}];
+      const box=candidates.find(box=>box.x>=4&&box.x+box.w<=this.w-4&&box.y>=28&&box.y+box.h<=this.h-85&&!occupied.some(b=>overlaps(box,b))&&!planets.some(q=>q.id!==p.id&&overlaps(box,{x:q.x-q.r-5,y:q.y-q.r-5,w:q.r*2+10,h:q.r*2+10})));
+      if(!box)continue;
+      occupied.push(box);c.textAlign='center';c.fillStyle=selected?'#fff0e5':'#c0c8d8';c.fillText(title,p.x,box.y+12);
+      c.font='9px monospace';c.fillStyle=selected?COLORS[note.kind]:'#6a7c94';c.fillText(note.kind.toUpperCase(),p.x,box.y+28);
+    }
+
+  }
+}
+
+
+
+const $=selector=>document.querySelector(selector);
+const escape=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+const state={data:{version:1,notes:[],links:[]},selected:null,kind:'all',tag:'',view:'explore',mode:null,path:[],editing:null,server:false,busy:false};
+let toastTimer;
+function toast(message){$('#toast').textContent=message;$('#toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),5000);}
+const universe=new Universe($('#universe'),{select:selectNote,move:async(id,x,y)=>{const note=state.data.notes.find(n=>n.id===id);if(note)await mutate(()=>request('/api/notes/'+id,'PUT',{x,y,revision:note.revision}),'Position saved.');}});
+function filtered(){return searchNotes(state.data.notes,'',state.kind,state.tag);}
+function render(){
+  const notes=filtered(),ids=new Set(notes.map(n=>n.id));
+  universe.set({notes,links:state.data.links.filter(l=>ids.has(l.from)&&ids.has(l.to))},state.selected,state.path);
+  $('#map-count').textContent=notes.length+' thoughts in view';$('#map-empty').hidden=notes.length>0;
+  $('#total-notes').textContent=state.data.notes.length;$('#count-all').textContent=state.data.notes.length;
+  for(const kind of KINDS)$('#count-'+kind).textContent=state.data.notes.filter(n=>n.kind===kind).length;
+  $('#connection-count').textContent=state.data.links.length+' CONNECTIONS';
+  document.querySelectorAll('[data-kind]').forEach(button=>{button.classList.toggle('active',button.dataset.kind===state.kind);button.setAttribute('aria-pressed',String(button.dataset.kind===state.kind));});
+  $('#mobile-kind').value=state.kind;
+  const tags=[...new Set(state.data.notes.flatMap(n=>n.tags))].sort();
+  $('#tag-list').innerHTML=tags.map(tag=>'<button class="'+(tag===state.tag?'active':'')+'" data-tag="'+escape(tag)+'" aria-pressed="'+(tag===state.tag)+'"># '+escape(tag)+'</button>').join('')||'<span class="search-help">Tags appear as you add thoughts.</span>';
+  $('#clear-tag').hidden=!state.tag;
+  $('#library').innerHTML=notes.length?notes.map(n=>'<button class="thought-card" data-select="'+escape(n.id)+'"><span class="kind-pill" style="--note-color:'+COLORS[n.kind]+'">'+n.kind+'</span><h3>'+escape(n.title)+'</h3><p>'+escape(n.body.slice(0,120))+(n.body.length>120?'…':'')+'</p><span class="card-tags">'+n.tags.map(t=>'#'+escape(t)).join(' · ')+'</span></button>').join(''):'<p class="search-help">No thoughts match this view. Choose another filter or create a thought.</p>';
+  $('#map-view').hidden=state.view!=='explore';$('#library').hidden=state.view!=='library';
+  for(const view of ['explore','library']){const button=$('#'+view+'-view');button.classList.toggle('active',state.view===view);button.setAttribute('aria-pressed',String(state.view===view));}
+  $('#mode-banner').hidden=!state.mode&&!state.path.length;
+  $('#mode-text').textContent=state.mode?(state.mode.type==='connect'?'Choose another thought to connect.':'Choose a destination to find the shortest route.'):(state.path.length?state.path.length+' thoughts along this route.':'');
+  renderInspector();
+}
+function renderInspector(){
+  const note=state.data.notes.find(n=>n.id===state.selected);
+  if(!note){$('#inspector-content').innerHTML='<p class="inspector-empty">Select a planet or a library card to explore a thought.<br><br>Every connection starts with a little curiosity.</p>';return;}
+  const related=neighbors(note.id,state.data.links).map(id=>state.data.notes.find(n=>n.id===id)).filter(Boolean);
+  const created=new Intl.DateTimeFormat('en',{month:'short',day:'numeric',year:'numeric'}).format(new Date(note.createdAt));
+  $('#inspector-content').innerHTML='<div class="planet-preview"><img alt="" src="'+universe.texture(note.kind).toDataURL()+'"></div><span class="kind-pill" style="--note-color:'+COLORS[note.kind]+'">'+note.kind+'</span><h2>'+escape(note.title)+'</h2><p class="note-date">Created '+created+'</p><div class="note-body">'+escape(note.body||'An idea waiting to unfold.')+'</div><div class="note-tags">'+note.tags.map(t=>'<span class="tag">#'+escape(t)+'</span>').join('')+'</div><div class="inspector-actions"><button class="edit" data-action="edit">Edit thought ↗</button><button data-action="connect">＋ Connect</button><button data-action="route">Find a route</button></div><div class="connections-title">CONNECTED THOUGHTS / '+related.length+'</div>'+related.map(n=>{const link=state.data.links.find(l=>(l.from===note.id&&l.to===n.id)||(l.to===note.id&&l.from===n.id));return '<div class="connection-row"><button data-select="'+escape(n.id)+'"><span class="connection-dot">↗</span>'+escape(n.title)+'</button><button class="remove-link" data-unlink="'+escape(link.id)+'" aria-label="Disconnect '+escape(n.title)+'">×</button></div>';}).join('')+(!related.length?'<p class="search-help">No connections yet. Follow an interesting thread.</p>':'')+'<button class="delete-note" data-action="delete">Delete this thought</button>';
+}
+async function request(path,method='GET',payload){
+  if(state.server){const res=await fetch(path,{method,headers:payload?{'Content-Type':'application/json'}:{},body:payload?JSON.stringify(payload):undefined});const data=await res.json();if(!res.ok)throw Error(data.error||'The request could not be completed.');return data;}
+  // Standalone preview uses the same domain validation, with a separate local store.
+  const draft=structuredClone(state.data),now=new Date().toISOString();let result;
+  if(path==='/api/workspace')return state.data;
+  if(path==='/api/notes'&&method==='POST'){if(draft.notes.length>=500)throw Error('The workspace supports up to 500 thoughts.');result={id:crypto.randomUUID(),...validateNote(payload),revision:1,createdAt:now,updatedAt:now};draft.notes.push(result);}
+  else if(path.startsWith('/api/notes/')){const id=path.split('/').pop(),index=draft.notes.findIndex(n=>n.id===id);if(index<0)throw Error('Thought not found.');if(payload.revision!==draft.notes[index].revision)throw Error('This thought changed. Refresh before saving.');if(method==='DELETE'){draft.notes.splice(index,1);draft.links=draft.links.filter(l=>l.from!==id&&l.to!==id);}else{result={...draft.notes[index],...validateNote(payload,{partial:true}),revision:payload.revision+1,updatedAt:now};draft.notes[index]=result;}}
+  else if(path==='/api/links'){if(payload.from===payload.to||![payload.from,payload.to].every(id=>draft.notes.some(n=>n.id===id)))throw Error('Choose two different thoughts.');result=draft.links.find(l=>(l.from===payload.from&&l.to===payload.to)||(l.to===payload.from&&l.from===payload.to));if(!result){if(draft.links.length>=2000)throw Error('The workspace supports up to 2,000 connections.');result={id:crypto.randomUUID(),from:payload.from,to:payload.to,createdAt:now};draft.links.push(result);}}
+  else if(path.startsWith('/api/links/'))draft.links=draft.links.filter(l=>l.id!==path.split('/').pop());
+  else if(path==='/api/import'){const clean=validateSnapshot(payload);if(draft.notes.length+clean.notes.length>500||draft.links.length+clean.links.length>2000)throw Error('This import exceeds the workspace limits.');const ids=new Map();for(const note of clean.notes){const id=crypto.randomUUID();ids.set(note.id,id);draft.notes.push({...note,id,createdAt:now,updatedAt:now,revision:1});}for(const link of clean.links)draft.links.push({id:crypto.randomUUID(),from:ids.get(link.from),to:ids.get(link.to),createdAt:now});}
+  localStorage.setItem('atlas-preview-v1',JSON.stringify(draft));state.data=draft;return result;
+}
+async function refresh(){if(state.server)state.data=await request('/api/workspace');if(!state.data.notes.some(n=>n.id===state.selected))state.selected=state.data.notes[0]?.id||null;render();}
+async function mutate(operation,message){if(state.busy){toast('Please wait for the current change to finish.');return false;}state.busy=true;try{await operation();await refresh();if(message)toast(message);return true;}catch(error){toast(error.message);if(state.server)try{await refresh();}catch{}return false;}finally{state.busy=false;}}
+function selectNote(id){
+  if(state.mode){const from=state.mode.from,type=state.mode.type;state.mode=null;if(type==='connect'){if(from===id){render();return toast('Choose a different thought.');}void mutate(()=>request('/api/links','POST',{from,to:id}),'Connection created.');}else{state.path=shortestPath(from,id,state.data.links);if(!state.path.length)toast('These thoughts are not connected yet.');else{state.kind='all';state.tag='';state.view='explore';toast('Found a route with '+(state.path.length-1)+' connections.');}render();}return;}
+  state.selected=id;state.path=[];$('#inspector').classList.add('open');render();
+}
+function editor(note=null){state.editing=note?{id:note.id,revision:note.revision}:null;const form=$('#note-form');form.reset();form.elements.title.value=note?.title||'';form.elements.body.value=note?.body||'';form.elements.kind.value=note?.kind||'idea';form.elements.tags.value=note?.tags.join(', ')||'';$('#editor-label').textContent=note?'EDIT THOUGHT':'NEW THOUGHT';$('#form-error').textContent='';$('#note-dialog').showModal();form.elements.title.focus();}
+let confirmCallback=null;
+function confirmAction(title,description,callback){$('#confirm-title').textContent=title;$('#confirm-body').textContent=description;confirmCallback=callback;$('#confirm-dialog').showModal();}
+$('#confirm-action').onclick=()=>{const callback=confirmCallback;confirmCallback=null;$('#confirm-dialog').close();callback?.();};
+document.querySelectorAll('[data-close]').forEach(button=>button.onclick=()=>$('#'+button.dataset.close).close());
+$('#new-note').onclick=()=>editor();
+$('#note-form').onsubmit=async event=>{
+  event.preventDefault();const form=event.currentTarget,fields=Object.fromEntries(new FormData(form));
+  const payload={title:fields.title,body:fields.body,kind:fields.kind,tags:fields.tags.split(',').map(t=>t.trim()).filter(Boolean)};
+  try{validateNote({...payload,x:0,y:0});}catch(error){$('#form-error').textContent=error.message;return;}
+  $('#save-note').disabled=true;
+  const editing=state.editing;let result;
+  const ok=await mutate(async()=>{result=await request(editing?'/api/notes/'+editing.id:'/api/notes',editing?'PUT':'POST',editing?{...payload,revision:editing.revision}:{...payload,...findOpenPosition(state.data.notes)});},'Thought saved.');
+  $('#save-note').disabled=false;
+  if(ok){$('#note-dialog').close();state.kind='all';state.tag='';selectNote(result.id);universe.fit();}else $('#form-error').textContent='Could not save. Your draft is still here. If another tab changed this note, close and reopen the editor after copying your draft.';
+};
+$('#inspector-content').onclick=event=>{
+  const button=event.target.closest('button');if(!button)return;
+  if(button.dataset.select)return selectNote(button.dataset.select);
+  if(button.dataset.unlink)return confirmAction('Remove this connection?','Both thoughts will remain in your universe.',()=>void mutate(()=>request('/api/links/'+button.dataset.unlink,'DELETE'),'Connection removed.'));
+  const note=state.data.notes.find(n=>n.id===state.selected);if(!note)return;
+  if(button.dataset.action==='edit')editor(note);
+  if(['connect','route'].includes(button.dataset.action)){state.mode={type:button.dataset.action,from:note.id};state.path=[];state.kind='all';state.tag='';$('#inspector').classList.remove('open');render();}
+  if(button.dataset.action==='delete')confirmAction('Delete “'+note.title+'”?','This removes the thought and its connections. Export a backup first if you may need them again.',()=>void mutate(()=>request('/api/notes/'+note.id,'DELETE',{revision:note.revision}),'Thought deleted.'));
+};
+$('#library').onclick=event=>{const card=event.target.closest('[data-select]');if(card)selectNote(card.dataset.select);};
+$('#kind-filters').onclick=event=>{const button=event.target.closest('[data-kind]');if(button){state.kind=button.dataset.kind;state.path=[];render();universe.fit();}};
+$('#mobile-kind').onchange=event=>{state.kind=event.target.value;render();universe.fit();};
+$('#tag-list').onclick=event=>{const button=event.target.closest('[data-tag]');if(button){state.tag=state.tag===button.dataset.tag?'':button.dataset.tag;render();universe.fit();}};
+$('#clear-tag').onclick=()=>{state.tag='';render();universe.fit();};
+for(const view of ['explore','library'])$('#'+view+'-view').onclick=()=>{state.view=view;render();if(view==='explore')requestAnimationFrame(()=>{universe.resize();universe.fit();});};
+$('#close-inspector').onclick=()=>$('#inspector').classList.remove('open');
+$('#cancel-mode').onclick=()=>{state.mode=null;state.path=[];render();};
+$('#zoom-in').onclick=()=>universe.scale(1.2);$('#zoom-out').onclick=()=>universe.scale(1/1.2);$('#fit').onclick=()=>universe.fit();
+function search(){const notes=searchNotes(state.data.notes,$('#search-input').value);$('#search-results').innerHTML=notes.slice(0,30).map(note=>'<button class="search-result" data-select="'+escape(note.id)+'"><strong>'+escape(note.title)+'</strong><span>'+note.kind+' · '+note.tags.map(escape).join(', ')+'</span></button>').join('')||'<p class="search-help">No thoughts found. Try another word.</p>';}
+function openSearch(){$('#search-dialog').showModal();$('#search-input').value='';search();$('#search-input').focus();}
+$('#search-open').onclick=openSearch;$('#search-input').oninput=search;
+$('#search-results').onclick=event=>{const button=event.target.closest('[data-select]');if(button){$('#search-dialog').close();state.kind='all';state.tag='';selectNote(button.dataset.select);}};
+document.addEventListener('keydown',event=>{if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='k'){event.preventDefault();if(!document.querySelector('dialog[open]'))openSearch();}if(event.key==='Escape'){state.mode=null;state.path=[];render();}});
+$('#help-open').onclick=()=>{$('#help-storage').textContent=state.server?'Your workspace is saved in the local SQLite database. Export for a portable backup.':'This standalone preview saves to this browser. Run npm start for the SQLite-backed app. Clearing browser data removes preview notes.';$('#help-dialog').showModal();};
+$('#export').onclick=()=>{const blob=new Blob([JSON.stringify(state.data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='atlas-universe-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Universe exported. Keep this file as your backup.');};
+$('#import-open').onclick=()=>$('#import-file').click();
+$('#import-file').onchange=async event=>{const file=event.target.files[0];event.target.value='';if(!file)return;try{if(file.size>2_000_000)throw Error('Choose a JSON file smaller than 2 MB.');const data=validateSnapshot(JSON.parse(await file.text()));confirmAction('Add '+data.notes.length+' thoughts?','This creates new copies of the imported thoughts and connections. Your existing universe stays intact.',()=>void mutate(()=>request('/api/import','POST',data),'Universe imported.'));}catch(error){toast(error.message);}};
+async function boot(){
+  try{if(location.protocol==='file:')throw Error();const response=await fetch('/api/workspace',{signal:AbortSignal.timeout(10000)});if(!response.ok)throw Error();const data=await response.json();validateSnapshot(data);state.data=data;state.server=true;}catch{
+    try{const raw=localStorage.getItem('atlas-preview-v1');if(raw){const data=JSON.parse(raw);validateSnapshot(data);state.data=data;}else state.data=seededWorkspace();}catch{state.data=seededWorkspace();toast('Saved preview data could not be loaded. Export your work regularly.');}
+  }
+  state.selected=state.data.notes.find(n=>n.id==='creative-engine')?.id||state.data.notes[0]?.id||null;
+  $('#storage-mode').textContent=state.server?'● LOCAL DATABASE CONNECTED':'◌ PREVIEW · SAVED IN THIS BROWSER';
+  render();requestAnimationFrame(()=>{universe.resize();universe.fit();});
+}
+boot();
+
+$('#tidy').onclick=async()=>{const positions=tidyPositions(state.data.notes);const originals=new Map(state.data.notes.map(n=>[n.id,n]));await mutate(async()=>{for(const p of positions){const n=originals.get(p.id);if(n.x!==p.x||n.y!==p.y)await request('/api/notes/'+p.id,'PUT',{x:p.x,y:p.y,revision:n.revision});}},'Your thoughts have room to breathe.');universe.fit();};
+
+})();
+</script></body></html>
