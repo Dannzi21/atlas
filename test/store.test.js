@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdtempSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {Store} from '../lib/store.mjs';
+const note={title:'An idea',body:'Details',kind:'idea',tags:['test'],x:1,y:2};
+test('SQLite persists updates across connections',()=>{const dir=mkdtempSync(join(tmpdir(),'atlas-test-'));try{let s=new Store(join(dir,'test.sqlite'),{seed:false});const n=s.insert(note);s.close();s=new Store(join(dir,'test.sqlite'),{seed:false});assert.equal(s.get(n.id).title,note.title);s.close();}finally{rmSync(dir,{recursive:true,force:true});}});
+test('rejects stale revisions rather than overwriting another tab',()=>{const s=new Store(':memory:',{seed:false});try{const n=s.insert(note);s.update(n.id,{title:'New',revision:1});assert.throws(()=>s.update(n.id,{title:'Stale',revision:1}),e=>e.status===409);assert.equal(s.get(n.id).title,'New');}finally{s.close();}});
+test('links are idempotent and deleting a node cascades',()=>{const s=new Store(':memory:',{seed:false});try{const a=s.insert(note),b=s.insert(note);const link=s.connect(a.id,b.id);assert.equal(s.connect(b.id,a.id).id,link.id);s.delete(a.id,1);assert.equal(s.snapshot().links.length,0);assert.equal(s.snapshot().notes.length,1);}finally{s.close();}});
+test('invalid import leaves existing data untouched',()=>{const s=new Store(':memory:',{seed:false});try{s.insert(note);assert.throws(()=>s.import({version:1,notes:[{...note,id:'a'}],links:[{from:'a',to:'no'}]}));assert.equal(s.snapshot().notes.length,1);}finally{s.close();}});
+test('imports remap IDs without overwriting existing thoughts',()=>{const s=new Store(':memory:',{seed:false});try{const a=s.insert(note),b=s.insert(note);s.connect(a.id,b.id);s.import(s.snapshot());assert.equal(s.snapshot().notes.length,4);assert.equal(s.snapshot().links.length,2);assert.equal(new Set(s.snapshot().notes.map(n=>n.id)).size,4);}finally{s.close();}});
+test('seeding runs once even when the universe becomes empty',()=>{const dir=mkdtempSync(join(tmpdir(),'atlas-seed-'));try{let s=new Store(join(dir,'test.sqlite'));for(const n of s.snapshot().notes)s.delete(n.id,n.revision);s.close();s=new Store(join(dir,'test.sqlite'));assert.equal(s.snapshot().notes.length,0);s.close();}finally{rmSync(dir,{recursive:true,force:true});}});
