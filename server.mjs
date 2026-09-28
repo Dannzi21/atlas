@@ -1,0 +1,11 @@
+import {mkdirSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import {Store} from './lib/store.mjs';
+import {createApp} from './lib/http.mjs';
+const dataDir=fileURLToPath(new URL('./data/',import.meta.url));mkdirSync(dataDir,{recursive:true});
+const store=new Store(dataDir+'/atlas.sqlite');
+const server=createApp(store,fileURLToPath(new URL('./public/',import.meta.url)));
+const port=Number(process.env.PORT||3200);
+server.listen(port,'127.0.0.1',()=>console.log('Atlas is ready at http://localhost:'+port));
+server.on('error',error=>{console.error(error.message);store.close();process.exitCode=1;});
+for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>server.close(()=>{store.close();process.exit(0);}));
